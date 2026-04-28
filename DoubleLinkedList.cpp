@@ -2,22 +2,19 @@
 #include <string>
 using namespace std;
 
-class Node
-{
-    public:
-    int noMhs;
-    Node *next;
-    Node *prev;
-};
-
-class DoublyLinkedList
+class siswa;
+class out_of_range
 {
     private:
-    Node *START;
+    string nama;
 
     public:
-    DoublyLinkedList()
-    {
+    void setNama(string pNama);
+    friend class siswa;
+};
 
-    }
-} 
+class siswa
+{
+    private:
+    int id;
+}
