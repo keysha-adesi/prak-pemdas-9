@@ -1,24 +1,22 @@
 #include <iostream>
-#include <string>
 using namespace std;
 
-class mahasiswa
-{
-private:
-    string nama;
+class mahasiswa{
 public:
-    friend void setNama(mahasiswa &a, string);
+    int nim;
+    void showNim(){
+        cout << "No Induk = " <<nim<<endl;
+    }
 };
 
-void setNama(mahasiswa &a, string b)
-{
-    a.nama = b;
-    cout << a.nama;
-}
-
-int main()
-{
-    mahasiswa joko;
-    setNama(joko, "Kairi Kumar");
+int main(){
+    mahasiswa mhs{1}; //object mhs
+    mhs.showNim(); //member access operator
+    mahasiswa &refMhs = mhs; //pointer reference refMhs
+    refMhs.nim = 2; //member access operator
+    mhs.showNim();
+    mahasiswa *pMhs = &mhs; //pointer dereference pMhs
+    pMhs->nim = 3; //arrow operator
+    pMhs->showNim();
     return 0;
 }
