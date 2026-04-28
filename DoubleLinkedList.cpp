@@ -3,7 +3,7 @@
 using namespace std;
 
 class siswa;
-class out_of_range
+class orang
 {
     private:
     string nama;
